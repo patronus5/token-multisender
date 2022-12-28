@@ -1,0 +1,69 @@
+{
+  "name": "multisender",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "npm": "6.14.13",
+    "node": "14.17.0"
+  },
+  "dependencies": {
+    "@craco/craco": "^5.9.0",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@testing-library/jest-dom": "^5.16.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@walletconnect/web3-provider": "^1.7.8",
+    "axios": "^0.26.0",
+    "classnames": "^2.3.1",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.5",
+    "react": "16.13.1",
+    "react-csv-reader": "^3.5.0",
+    "react-dom": "16.13.1",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "3.4.3",
+    "react-select": "^5.4.0",
+    "react-toastify": "^8.1.0",
+    "serve": "^13.0.2",
+    "styled-components": "5.2.0",
+    "web-vitals": "^1.1.2",
+    "web3": "^1.6.1",
+    "web3modal": "^1.9.7"
+  },
+  "scripts": {
+    "dev": "craco start",
+    "start": "serve -s build",
+    "build": "craco build",
+    "test": "craco test",
+    "heroku-postbuild": "npm run build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  }
+}

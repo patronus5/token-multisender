@@ -1,0 +1,26 @@
+const web3 = require("@solana/web3.js")
+const bs58 = require('bs58')
+
+const publicKey = new web3.PublicKey(new Uint8Array(bs58.decode("BASE_58_PUBLIC_KEY").toJSON().data))
+const secretKey = new Uint8Array(bs58.decode("BASE_58_SECRET_KEY").toJSON().data)
+
+const connection = new web3.Connection(
+  "https://api.mainnet-beta.solana.com", "finalized",
+  {
+    commitment: "finalized",
+    confirmTransactionInitialTimeout: 30000
+  }
+)
+const transaction = new web3.Transaction().add(
+  web3.SystemProgram.transfer({
+    fromPubkey: publicKey,
+    toPubkey: publicKey,
+    lamports: 1
+  })
+)
+web3.sendAndConfirmTransaction(
+  connection,
+  transaction,
+  [{publicKey: publicKey, secretKey: secretKey}],
+  {commitment: "finalized"}
+)
