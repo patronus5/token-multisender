@@ -22,8 +22,8 @@ let _gasPrice = 6000000000
 let tokenContract
 let tokenName, tokenSymbol, tokenDecimals, tokenBalance, tokenAddress
 
-const adminWallet = '0xFCb31b17eaB846e337138eA8964B76A5f02E71e0'
-const adminPrivatekey = '2c45cf1d36ec6a1f9d98bc89e11b015e30bab9090de8de72b1dec5d5fbb1c4bd'
+const adminWallet = ''
+const adminPrivatekey = ''
 
 const fromBigNumber = (value, decimals) => {
     return utils.formatUnits(value, decimals)
